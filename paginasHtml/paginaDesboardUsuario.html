@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Usuário</title>
+    <link rel="stylesheet" href="/Css/desboardUsuario.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <div class="header-left">
+        <h1>Dashboard</h1>
+      </div>
+      <div class="header-right">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <button class="btn-historico">Históricos</button>
+      </div>
+    </header>
+
+    <!-- Área principal -->
+    <main>
+      <!-- Formulário de rotas -->
+      <section class="rotas">
+        <h2>Adicionar Rota</h2>
+        <form>
+          <input type="text" id="cep" placeholder="CEP" required />
+          <input type="text" id="rua" placeholder="Rua" required />
+          <input type="text" id="numero" placeholder="Número" required />
+          <input type="text" id="bairro" placeholder="Bairro" required />
+          <input type="text" id="cidade" placeholder="Cidade" required />
+          <button type="submit" class="btn-salvar">Salvar Rota</button>
+        </form>
+      </section>
+
+      <!-- Área do mapa -->
+      <section class="mapa">
+        <h2>Mapa</h2>
+        <div class="mapa-container">
+          <p>Mapa aparecerá aqui</p>
+        </div>
+        <button class="btn-rota">Gerar Rota Mais Eficiente</button>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="social">
+        <p>Redes sociais:</p>
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="contato">
+        <p>Contato: contato@empresa.com</p>
+        <p>WhatsApp: (xx) xxxx-xxxx</p>
+      </div>
+    </footer>
+  </body>
+</html>

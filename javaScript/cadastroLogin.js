@@ -33,3 +33,20 @@ function limparFormulario() {
   document.getElementById("confirmarSenha").value = "";
   document.getElementById("tipoConta").value = "";
 }
+
+function validarLogin() {
+  const emailLogin = document.getElementById("emailLogin").value;
+  const senhaLogin = document.getElementById("senhaLogin").value;
+  const usuarioEncontrado = listaUsuarios.find(
+    (usuario) => usuario.email === emailLogin && usuario.senha === senhaLogin,
+  );
+  let usuarioIndex = listaUsuarios.indexOf(usuarioInput);
+  if (usuarioIndex !== -1 && listaSenhas[usuarioIndex] === senhaInput) {
+    alert("Login bem-sucedido (Cliente)!");
+    window.location.href = "/paginasHtml/paginaDesboardUsuario.html";
+    return true;
+  } else {
+    alert("Email ou senha incorretos. Tente novamente.");
+    return false;
+  }
+}

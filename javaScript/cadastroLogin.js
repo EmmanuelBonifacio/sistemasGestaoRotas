@@ -7,6 +7,10 @@ document.getElementById("bntCadastrar").addEventListener("click", () => {
   const senha = document.getElementById("senha").value;
   const confirmarSenha = document.getElementById("confirmarSenha").value;
   const tipoConta = document.getElementById("tipoConta").value;
+  if (!nome || !email || !senha || !confirmarSenha) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
 
   const novoUsuario = {
     nome: nome,
@@ -27,5 +31,5 @@ function limparFormulario() {
   document.getElementById("email").value = "";
   document.getElementById("senha").value = "";
   document.getElementById("confirmarSenha").value = "";
-  document.getElementById("tipoConta").value = "usuario";
+  document.getElementById("tipoConta").value = "";
 }

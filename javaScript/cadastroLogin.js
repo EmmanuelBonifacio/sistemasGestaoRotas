@@ -74,7 +74,7 @@ function limparFormularioCadastro() {
 // Login
 const btnLogin = document
   .getElementById("bntLogin")
-  ?.querySelector(".login-btn");
+  .querySelector(".login-btn");
 if (btnLogin) {
   btnLogin.addEventListener("click", function (e) {
     e.preventDefault();

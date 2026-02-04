@@ -17,5 +17,13 @@ if (bntAdiconarRota) {
 
     rotas.push(novasRotas);
     console.log(rotas);
+    alert("Rota adicionada com sucesso!");
+
+    // Limpar os campos do formulário após adicionar a rota
+    document.getElementById("cep").value = "";
+    document.getElementById("rua").value = "";
+    document.getElementById("numero").value = "";
+    document.getElementById("bairro").value = "";
+    document.getElementById("cidade").value = "";
   });
 }

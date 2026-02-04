@@ -1,21 +1,21 @@
+// Array para armazenar as rotas adicionadas
 const rotas = [];
 
-function adicionarRota(cep, rua, numero, bairro, cidade) {
-  const rota = { cep, rua, numero, bairro, cidade };
-  rotas.push(rota);
-  console.log("Rota adicionada:", rota);
-}
-function salvarRota() {
-  const cep = document.getElementById("cepRota").value;
-  const rua = document.getElementById("ruaRota").value;
-  const numero = document.getElementById("numeroRota").value;
-  const bairro = document.getElementById("bairroRota").value;
-  const cidade = document.getElementById("cidadeRota").value;
-  adicionarRota(cep, rua, numero, bairro, cidade);
-  document.getElementById("cepRota").value = "";
-  document.getElementById("ruaRota").value = "";
-  document.getElementById("numeroRota").value = "";
-  document.getElementById("bairroRota").value = "";
-  document.getElementById("cidadeRota").value = "";
-  atualizarListaRotas();
+const bntAdiconarRota = document.getElementById("bntAdiconarRota");
+
+if (bntAdiconarRota) {
+  bntAdiconarRota.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const novasRotas = {
+      cep: document.getElementById("cep").value,
+      rua: document.getElementById("rua").value,
+      numero: document.getElementById("numero").value,
+      bairro: document.getElementById("bairro").value,
+      cidade: document.getElementById("cidade").value,
+    };
+
+    rotas.push(novasRotas);
+    console.log(rotas);
+  });
 }
